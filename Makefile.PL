@@ -29,7 +29,7 @@ my %WriteMakefileArgs = (
     'Dist::Zilla' => '4.102342',
     'Moose' => '1.12'
   },
-  'VERSION' => '1.103080',
+  'VERSION' => '1.110050',
   'test' => {
     'TESTS' => 't/*.t'
   }

@@ -2,7 +2,7 @@ NAME
     Dist::Zilla::Plugin::AutoMetaResources - Automagical MetaResources
 
 VERSION
-    version 1.103080
+    version 1.110050
 
 SYNOPSIS
         # dist.ini

@@ -2,7 +2,7 @@ use strict;
 use warnings;
 package Dist::Zilla::Plugin::AutoMetaResources;
 BEGIN {
-  $Dist::Zilla::Plugin::AutoMetaResources::VERSION = '1.103080';
+  $Dist::Zilla::Plugin::AutoMetaResources::VERSION = '1.110050';
 }
 #ABSTRACT: Automagical MetaResources
 
@@ -34,7 +34,7 @@ sub _build__repository_map {
     return {
         github => {
             url => 'git://github.com/%{user}/%{lcdist}.git',
-            web => 'http://github.com/%{user}/%{lcdist}',
+            web => 'https://github.com/%{user}/%{lcdist}',
             type => 'git',
         },
         gitmo => {
@@ -70,7 +70,7 @@ sub _build__bugtracker_map {
             mailto => 'bug-%{dist}@rt.cpan.org',
         },
         github => {
-            web => 'http://github.com/%{user}s/%{lcdist}/issues',
+            web => 'https://github.com/%{user}/%{lcdist}/issues',
         }
     }
 }
@@ -146,7 +146,7 @@ Dist::Zilla::Plugin::AutoMetaResources - Automagical MetaResources
 
 =head1 VERSION
 
-version 1.103080
+version 1.110050
 
 =head1 SYNOPSIS
 

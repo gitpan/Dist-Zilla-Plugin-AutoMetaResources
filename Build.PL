@@ -21,7 +21,7 @@ my %module_build_args = (
     'Alex J. G. Burzyński <ajgb@cpan.org>'
   ],
   'dist_name' => 'Dist-Zilla-Plugin-AutoMetaResources',
-  'dist_version' => '1.103080',
+  'dist_version' => '1.110050',
   'license' => 'perl',
   'module_name' => 'Dist::Zilla::Plugin::AutoMetaResources',
   'recommends' => {},
