@@ -2,7 +2,10 @@ use strict;
 use warnings;
 package Dist::Zilla::Plugin::AutoMetaResources;
 BEGIN {
-  $Dist::Zilla::Plugin::AutoMetaResources::VERSION = '1.110050';
+  $Dist::Zilla::Plugin::AutoMetaResources::AUTHORITY = 'cpan:AJGB';
+}
+{
+  $Dist::Zilla::Plugin::AutoMetaResources::VERSION = '1.20';
 }
 #ABSTRACT: Automagical MetaResources
 
@@ -12,7 +15,7 @@ with 'Dist::Zilla::Role::MetaProvider';
 
 sub _subs(@) {
     my ($format, $vars) = @_;
-    $format =~ s/%{([\w_\.]+)}/$vars->{$1} || ''/ge;
+    $format =~ s/%\{([\w_\.]+)\}/$vars->{$1} || ''/ge;
     return $format;
 }
 
@@ -146,7 +149,7 @@ Dist::Zilla::Plugin::AutoMetaResources - Automagical MetaResources
 
 =head1 VERSION
 
-version 1.110050
+version 1.20
 
 =head1 SYNOPSIS
 
@@ -319,7 +322,7 @@ Alex J. G. Burzyński <ajgb@cpan.org>
 
 =head1 COPYRIGHT AND LICENSE
 
-This software is copyright (c) 2010 by Alex J. G. Burzyński <ajgb@cpan.org>.
+This software is copyright (c) 2013 by Alex J. G. Burzyński <ajgb@cpan.org>.
 
 This is free software; you can redistribute it and/or modify it under
 the same terms as the Perl 5 programming language system itself.
